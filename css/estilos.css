@@ -7,6 +7,7 @@ body
 
 nav {
   background: rgb(0, 0, 0);
+
   color: rgb(255, 255, 255);
   display: flex;
   align-items: center;
@@ -15,6 +16,7 @@ nav {
 nav .mainMenu {
   display: flex;
   list-style: none;
+ 
 }
 nav .mainMenu li a {
   display: inline-block;
@@ -26,7 +28,7 @@ nav .mainMenu li a {
   transition: 0.2s ease;
 }
 nav .mainMenu li a:hover {
-  background: rgb(255, 94, 0);
+  background: #2d2427;
 }
 nav .openMenu {
   font-size: 2rem;
@@ -40,18 +42,7 @@ nav .mainMenu .closeMenu,
   display: none;
   cursor: pointer;
 }
-.fa-facebook:hover {
-  color: rgb(0, 110, 255);
-}
-.fa-twitter:hover {
-  color: rgb(86, 154, 243);
-}
-.fa-instagram:hover {
-  color: rgb(255, 0, 191);
-}
-.fa-github:hover {
-  color: rgb(255, 123, 0);
-}
+
 nav .logo {
   margin: 6px;
   cursor: pointer;
@@ -83,46 +74,66 @@ nav .logo {
   }
   nav .mainMenu li a:hover {
     background: none;
-    color: rgb(255, 123, 0);
+    color:#D4AF37;
   }
   .icons i {
     display: inline-block;
     padding: 12px;
   }
+  .menunavp .submenu ul li a:hover
+  {
+    background: none;
+    color: #D4AF37;
+   
+  }
 }
+
+/*Estilos a los submenus*/
+.submenu
+{
+  background: black;
+  width: 100%;
+  padding: 10px;
+}
+.submenu ul li a 
+{
+  color: #E5DCC8;
+}
+.submenu ul li a:hover{
+  background: #2d2427;
+  padding: 20px;
+  }
+
 
 .contenedorFoto
 {
     margin:0 auto;
     display: grid;
     grid-template-columns: 50% 50%;
-    height: 800px;
     width: 90%;
     padding: 10px;
-
 }
 .Foto  figure
 {
     cursor: pointer;
-    border-radius: 50%;     
+    border-radius: 50%;  
     margin-top: 10%;
 }
 .capa h3{
     display: none;
 }
 
+
 .Foto .capa #preview
 {
     width: 80%;
     height: 100%;
     margin-top: 10%;
-    border-radius: 5px;
     box-shadow: 0 5px 5px rgba(45, 36, 39, 0.6);
-
     border-radius: 50%;  
-
    
 }
+
 img {
     margin: auto;
     display: block;  
@@ -161,13 +172,14 @@ img {
         display: inline-block;
         
       }
-      #archivo::before
-      {
-        content:'Editar foto';
+#archivo::before
+{
+ content:'Editar foto';
        
-      }
+}
 
 /*Datos*/
+
 .Datos h1
 {
     color: #2d2427;
@@ -201,181 +213,36 @@ input[type="submit"]
   cursor: pointer;
   border: none;
 }
-/*Seccion del botomn Editar*/
-.Datos a
-{
-  text-decoration: none;
-  background-color: #2d2427;
-  border-radius: 10%;
-  color: #E5DCC8;
-  font-size: 24px;
-  padding: 0.5em;
-}
-
-/*Estilos del modal*/
-.modal-container
-{
-  opacity: 0;
-  visibility: hidden;
-  position: fixed;
-  z-index: 1000;
-  width: 100%;
-  height: 100vh;
-  top:0;
-  left: 0;
-  background: rgba(0, 0,0, 0.5) ;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-}
-.modal-texto
-{
-  color: #E5DCC8;
- 
-}
-
-/*
-input[type="text"]
-{
-  height: 20px;
-  width: 70%;
-  margin-top: 30px;
-}
-input[type="email"]
-{
-  height: 20px;
-  width: 70%;
-  margin-top: 20px;
-  margin-left: 5px;
-}
-.correo
-{
-  margin-left: 20px;
-}
-.pais
-{
-  margin-left: 10%;
-}
-
-#guardar
-{
-  margin-top: 10%;
-  padding: 10px;
-  color: #E5DCC8;
-  background-color: #2d2427;
-  border: 2px solid #D4AF37;
-  border-radius: 10%;
-}
-*/
-
-.form
-{
-  padding: 30px 40px;
-}
-.form-control
-{
-  margin-bottom: 10px;
-  padding-bottom: 20px;
-  position: relative;
-  color: #E5DCC8;
-}
-
-.form-control label
-{
-  display: inline-block;
-  margin-bottom: 5px;
-}
-
-.form-control input
-{
-  border: 2px solid #f0f0f0;
-  border-radius: 4px;
-  display: block;
-  padding: 10px;
-  width: 100%;
-}
-
-.form-control input:focus
-{
-  outline: 0;
-  border-color: #777;
-}
-
-.form-control.success input
-{
-  border-color: #2ecc71;
-}
-.form-control small
-{
-  color: #e74c3c;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  visibility: visible;
-}
-.form-control.error small
-{
-  visibility: visible;
-}
-#guardar
-{
-  margin-top: 10%;
-  padding: 10px;
-  color: #E5DCC8;
-  background-color: #2d2427;
-  border: 2px solid #D4AF37;
-  border-radius: 10%;
-}
 
 
-
-
-.modal{
-  width: 50%;
-  height: 80%;
-  background: #2d2427;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-
-  border: 7px solid #D4AF37;
-
-  position: relative;
-  transition: transform 0.8s;
-  transform: translateY(0%);
-  border-radius: 10px;
-}
-.modal-close
+@media (max-width:600px)
 {
-  transform: translateY(-200%);
+ .contenedorFoto
+ {
+  max-height: 900px;
+ }
 }
 
-.close
+@media (min-width:600px) and (max-width:750px)
 {
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  display: inline-block;
-  width: 25px;
-  height: 25px;
-  background: #c44a4a;
-  color: #fff;
-  line-height: 25px;
-  cursor: pointer;
-  border-radius: 50%;
+ .contenedorFoto
+ {
+  max-height: 1100px;
+ }
 }
-
-
 
 
 @media only screen and (min-width:220px) and (max-width:750px){
 	.contenedorFoto{
 		display: grid;
-        grid-template-columns: 100%;
-      
+    grid-template-columns: 100%;
+     
 	}
+
+  .submenu ul li a
+  {
+    font-size: 20px;
+  }
 
     .Foto .capa #preview
     {
@@ -455,7 +322,7 @@ input[type="email"]
       }
       .contenedorFoto
       {
-        height: 1200px;
+        height: 1500px;
       }
       input[type="submit"]
       {
@@ -488,9 +355,6 @@ input[type="email"]
     color: #2d2427;
     font-size: 24px;
     text-decoration: none;
-    }
-.menunavp li a:hover{
-    color: #D4AF37;
     }
 
 
@@ -539,8 +403,12 @@ h3
     grid-template-columns: 100%;
 
 }
+
    
 }
+
+
+
 @media only screen and (min-width:501px) and (max-width:920px){
     .Contenedor2
     {
@@ -562,16 +430,6 @@ h3
     }
 }
 
-#open
-{
-    width: 400px;
-    border: none;
-    background-color: #2d2427;
-    color: #E5DCC8;
-    border-radius: 5px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 24px;
-    padding: 15px ;
-}
+
+
 
